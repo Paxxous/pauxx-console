@@ -1,14 +1,17 @@
 #include <iostream>
 #include <ncurses.h>
 #include "Screen.h"
+#include "Http.h"
 #include "Settings.h"
 
 /* Lmao this is the main function idoit */
-int main()
-{
+int main() {
   // Initialize the main screen
-  initSettings();
   Screen scr;
+  
+  // Initialize the http module
+  Http http;
+  // initSettings();
 
   // Print something to the console
   printw("amongus?\n");

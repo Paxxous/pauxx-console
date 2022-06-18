@@ -1,7 +1,6 @@
 #pragma once
 
 // Initialize settings
-void initSettings() 
-{
+void initSettings() {
 
 }
