@@ -10,7 +10,7 @@ Http::Http() {
 }
 
 // Preform a post request to communicate with out server
-void Http::post(const char* url, const char* payload) {
+int Http::post(const char* url, const char* payload) {
   curl_easy_setopt(curl, CURLOPT_URL, url);
   curl_easy_setopt(curl, CURLOPT_POSTFIELDS, payload);
 
@@ -28,4 +28,19 @@ void Http::post(const char* url, const char* payload) {
 
   // Always cleanup
   curl_easy_cleanup(curl);
+
+  // return the status of the request
+  return res;
+}
+
+// Preform a get request to recieve data from the server
+int Http::get(const char* url) {
+  curl_easy_setopt(curl, CURLOPT_URL, url);
+  curl_easy_setopt(curl, CURLOPT_HTTPGET, 1L);
+  curl_easy_setopt(curl, CURLOPT_FORBID_REUSE, 1L);
+
+  res = curl_easy_perform(curl);
+
+  // Return the status code
+  return res;
 }

@@ -12,6 +12,8 @@ int main() {
   // Initialize the http module
   Http http;
   // initSettings();
+  
+  http.post("http://127.0.0.1:8080/post", "Content=Hello, world!");
 
   // Print something to the console
   printw("amongus?\n");

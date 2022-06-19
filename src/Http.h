@@ -5,8 +5,8 @@
 class Http {
 public:
   Http();
-  void post(const char *url, const char* payload);
-  void cleanUp();
+  int post(const char *url, const char* payload);
+  int get(const char *url);
 private:
   CURL* curl;
   CURLcode res;
