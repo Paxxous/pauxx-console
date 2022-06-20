@@ -12,4 +12,5 @@ public:
 private:
   CURL* curl;
   CURLcode res;
+  FILE* GETResponse;
 };
