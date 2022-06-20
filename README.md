@@ -9,8 +9,8 @@ Originally this was supposed to be testing with ncurses, but then I just made an
 Grab the repo via git:
 
 ```sh
-git clone <INSERT REPO HERE>
-cd <NAME HERE>
+git clone https://github.com/Paxxous/pauxx-console.git
+cd pauxx-console
 ```
 
 And then compile and run via the makefile
