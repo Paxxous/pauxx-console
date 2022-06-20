@@ -12,8 +12,15 @@ int main() {
   // Initialize the http module
   Http http;
   // initSettings();
+ 
   
-  http.post("http://127.0.0.1:8080/post", "Content=Hello, world!");
+  // Post some data to our little node.js server
+//  http.post("http://127.0.0.1:8080/post", "Content=Hello, world!");
+
+  // Make a get requests to our little server
+  http.get("http://127.0.0.1:8080/get");
+
+  http.cleanUp();
 
   // Print something to the console
   printw("amongus?\n");
