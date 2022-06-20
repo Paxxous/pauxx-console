@@ -41,7 +41,7 @@ int Http::get(const char* url) {
   curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, NULL); // Setup a write function
   curl_easy_setopt(curl, CURLOPT_WRITEDATA, GETResponse); // Then write the response to a file.
 
-  // Close our file
+  // You should always close your file
   fclose(GETResponse);
 
   // Preform our little request
